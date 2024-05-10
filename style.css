@@ -1,0 +1,60 @@
+@charset "UTF-8";
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(120deg, #2980B9, #6DD5FA, #FFFFFF);
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+.calculator {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-group input,
+.input-group select {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: border-color 0.3s ease;
+}
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+.input-group button {
+    margin: 10px;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #007BFF, #0056B3);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.input-group button:hover {
+    background: linear-gradient(to right, #0056B3, #003D80);
+}

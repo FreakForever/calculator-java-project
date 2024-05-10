@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Calculator</h1>
+            <form action="MyServlet" method="POST">
+                <div class="input-group">
+                    <input type="number" id="operand1" name="operand1" required placeholder="Enter first number">
+                    <input type="number" id="operand2" name="operand2" required placeholder="Enter second number">
+                </div>
+                <div class="input-group">
+                    <select id="operation" name="operation" onchange="updatePlaceholders()">
+                        <option value="add">Addition</option>
+                        <option value="subtract">Subtraction</option>
+                        <option value="multiply">Multiplication</option>
+                        <option value="divide">Division</option>
+                        <option value="exponent">Exponent</option>
+                        <option value="LOG">Logarithm</option>
+                         <option value="fact">Factorial</option>
+                        
+                    </select>
+                    <button type="submit">Calculate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function updatePlaceholders() {
+            var operand1 = document.getElementById("operand1");
+            var operand2 = document.getElementById("operand2");
+            var operation = document.getElementById("operation");
+            
+            if (operation.value === "exponent") {
+                operand1.placeholder = "Enter base";
+                operand2.placeholder = "Enter power";
+            }
+            else if (operation.value === "LOG"){
+            	 operand1.placeholder = "Enter value";
+                 operand2.placeholder = "Enter base";
+            }
+            else if (operation.value === "fact"){
+                operand2.readOnly = true;
+                operand2.value = 1;
+           }
+        }
+    </script>
+</body>
+</html>
